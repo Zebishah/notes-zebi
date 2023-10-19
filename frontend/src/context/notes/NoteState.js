@@ -1,6 +1,7 @@
+
 import { useState } from "react";
 import NoteContext from "./NoteContext";
-
+require('dotenv').config();
 let NoteState = (props) => {
   let host = process.env.REACT_APP_API_HOST;
 

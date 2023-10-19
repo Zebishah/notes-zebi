@@ -1,6 +1,6 @@
 import { useState } from "react";
 import LogContext from "./LogContext";
-
+require('dotenv').config();
 const LogContexts = (props) => {
     let [Users, setUsers] = useState(null);
     let [email, setEmail] = useState(null);
