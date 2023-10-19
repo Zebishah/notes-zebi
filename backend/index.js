@@ -3,7 +3,11 @@ import express, { json } from 'express';
 require('dotenv').config();
 const app = express();
 import cors from 'cors';
-app.use(cors())
+app.use(cors({
+    origin: [""],
+    methods: ["POST", "GET"],
+    credentials: true
+}))
 app.use(json())
 const port = 5000;
 connectDB();
