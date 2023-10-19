@@ -4,7 +4,7 @@ require('dotenv').config();
 const app = express();
 import cors from 'cors';
 app.use(cors({
-    origin: [""],
+    origin: ["https://notes-zebi-front.vercel.app"],
     methods: ["POST", "GET"],
     credentials: true
 }))
