@@ -1,10 +1,10 @@
-const connectDB = require("./db");
-const express = require('express');
+import connectDB from "./db";
+import express, { json } from 'express';
 require('dotenv').config();
 const app = express();
-var cors = require('cors')
+import cors from 'cors';
 app.use(cors())
-app.use(express.json())
+app.use(json())
 const port = 5000;
 connectDB();
 app.use('/api/auth', require('./routes/auth'))
